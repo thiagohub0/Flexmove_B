@@ -34,10 +34,10 @@ rotasUsuarios.post("/usuarios", async (req, res) => {
       tipo,
     },
   });
-  res.json({ sucesso: "ok" });
+  res.json({ sucesso: "Ok" });
 });
 
-rotasUsuarios.delete("/usuarios/:id",  autenticacao,async (req, res) => {
+rotasUsuarios.delete("/usuarios/:id", autenticacao, async (req, res) => {
   await db.usuario.delete({
     where: { id: Number(req.params.id) },
     include: { planos: true },
