@@ -2,7 +2,6 @@
 
 **_O nosso aplicativo foi feito pensando na segurança e no conforto de cada usuário. Ele funcionará como um assistente virtual, onde haverá um profissional que não só mostra como realizar cada atividade com vídeos e imagens explicativas, mas também, oferece um retorno personalizado sobre o desempenho de cada pessoa, além de motivar o paciente com lembretes e metas diárias. Isso cria um ambiente de apoio contínuo, mesmo à distância._**
 
-
 # Profissionais 👨‍⚕️👩‍⚕️
 
 **_Para aqueles que atuam na área e se interessarem pelo aplicativo.._**
@@ -34,5 +33,7 @@ O app também permite registrar o progresso, enviar lembretes de sessões e arma
 # Créditos e Contato 💡
 
 > Feito com 💚 por [@Thiago , @Hellen , @Richardy , @Juan]
+
 > 💬 Dúvidas ou ideias? Entre em contato com nosso instagram!
+
 > @Flexmove
