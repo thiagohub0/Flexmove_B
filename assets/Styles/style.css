@@ -29,7 +29,7 @@ html {
 }
 
 header {
-  margin-top: 90px;
+  margin-top: 70px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@ header img {
   position: relative;
   scroll-behavior: smooth;
   width: auto;
-  height: 700px;
+  height: 740px;
 }
 
 .message.left {
@@ -139,9 +139,30 @@ header img {
   font-size: 0.9rem;
 }
 .base-text {
+  display: flex;
+  align-items: center;
   background: #ffffff;
   border-radius: 20px;
   border: 1px solid #7c7c7c;
-  width: 40px;
-  height: 40px;
+  width: 400px;
+  max-height: 40px;
+  padding: 5px;
+}
+
+.chatt {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #7c7c7c;
+  width: 280px;
+  height: 25px;
+  padding-left: 25px;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+.iconos {
+  margin-left: 5px;
+  margin-right: 5px;
 }

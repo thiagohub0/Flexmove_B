@@ -1,0 +1,145 @@
+body {
+  margin: 60px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.voltar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.logo img {
+  margin-top: 20px;
+  width: 350px;
+  height: 200px;
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.email {
+  margin-left: 45px;
+  margin: 50px;
+
+  border-color: #dbdbdb;
+  border-bottom: 0.4px solid;
+}
+.texto {
+  margin: -6px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(167, 167, 167);
+}
+.textodos {
+  margin: -6px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(153, 153, 153);
+}
+.senha {
+  margin-left: 45px;
+  margin: 50px;
+  border: none;
+  border-bottom: 0.4px solid;
+}
+
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: rgb(138, 138, 138);
+  text-decoration: none;
+}
+
+.btn {
+  width: 70%;
+  background: #000;
+  color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.divisor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+.google-btn {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  background: #d4d3d3;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.register {
+  margin-left: 100px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.register a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.footer-img {
+  margin-top: 40px;
+  margin-left: 50px;
+  max-width: 244px;
+  right: auto;
+}
+
+.footer-img img {
+  width: 100%;
+  border-radius: 10px;
+}
