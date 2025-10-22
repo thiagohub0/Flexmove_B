@@ -1,26 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .parte0 {
-    height: 25vw;
-    background-color: darkgray;
-    background: linear-gradient(90deg, #D9D9D9 100px, #6275de);
-    display: flex;
-    align-items: flex-end;
-    font-weight: 1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+  height: 25vw;
+  background-color: darkgray;
+  background: linear-gradient(90deg, #d9d9d9 100px, #6275de);
+  display: flex;
+  align-items: flex-end;
+  font-weight: 1000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }
 .parte1 {
-    height: 8px;
-    background: linear-gradient(270deg, #D9D9D9 100px, #6275de);
+  height: 8px;
+  background: linear-gradient(270deg, #d9d9d9 100px, #6275de);
 }
 .parte2 {
-    width: 100px;
-    margin: auto;
-    display: flex;
+  width: 90vw;
+  height: 140vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .parte3 {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.parte4 {
+  display: flex;
+  justify-content: center;
+}
+
+.parte5 {
+  width: 90vw;
+  height: 150vw;
+  border: 1px solid;
+  border-radius: 30px;
+  margin: 10px auto;
+}
+
+.parte6 {
+  display: flex;
+  justify-content: center;
+}
+
+.parte7 {
+  width: 100vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parte8 {
+  height: 15vw;
+  width: 50vw;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.fonte {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
