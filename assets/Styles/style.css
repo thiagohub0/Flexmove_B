@@ -10,10 +10,11 @@ html {
 }
 
 .container {
-  background-image: url(../assets/images/image\\(2\).png);
-
   width: 485px;
   height: 900px;
+  background-image: url(../Imagens/imagensdateladochat/image2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hexagon-bg {
@@ -71,8 +72,7 @@ header img {
 }
 
 .messages {
-  background-image: url(../assets/images/image\\(4\).png);
-
+  background-image: url(../Imagens/imagensdateladochat/image4.png);
   flex: 1;
   overflow-y: auto;
   padding: 10px 15px 20px;
