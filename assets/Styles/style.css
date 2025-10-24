@@ -1,20 +1,22 @@
-body,
-html {
+body, html {
+     
   margin: 0;
   padding: 0;
   height: 100vh;
+ 
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
-  background-image: url(../assets/images/image\\(2\).png);
-
+.container{
+ background-image: url(../assets/images/image\ \(2\).png);
+  
   width: 485px;
-  height: 900px;
+  height:900px;
 }
+
 
 .hexagon-bg {
   position: absolute;
@@ -34,7 +36,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(90deg, #d6d6d6, #d4d4d4, #d4d4d4, #4991d4);
+  background: linear-gradient(90deg, #d6d6d6,#d4d4d4,#d4d4d4, #4991d4);
   padding: 50px 20px 10px 15px;
   font-weight: 700;
   font-size: 1.9rem;
@@ -54,15 +56,16 @@ header img {
 }
 
 .date {
+  
   margin: 10px auto;
-
+  
   background: white;
   color: #7c7c7c;
   font-size: 0.75rem;
-  padding: 5px 5px;
+  padding: 5px 5px; 
   border-radius: 20px;
   width: fit-content;
-
+  
   z-index: 2;
   position: relative;
   font-weight: 1000;
@@ -71,7 +74,8 @@ header img {
 }
 
 .messages {
-  background-image: url(../assets/images/image\\(4\).png);
+   
+ background-image: url(../assets/images/image\ \(4\).png);
 
   flex: 1;
   overflow-y: auto;
@@ -83,18 +87,22 @@ header img {
   position: relative;
   scroll-behavior: smooth;
   width: auto;
-  height: 740px;
+  height:740px;
+  
 }
 
+
 .message.left {
+  
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom:20px ;
   border-radius: 0%;
 }
 
 .message.left img {
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -104,14 +112,18 @@ header img {
 }
 
 .message.left .text {
+ 
   border: 1px solid #1d1b1b;
   background: white;
-
+ 
   padding: 8px 15px;
-  border-radius: 6px 6px 10px 10px;
+  border-radius:6px 6px 10px 10px;
   max-width: 50%;
   font-size: 0.9rem;
+  
+  
 }
+
 
 .message.right {
   margin-bottom: 20px;
@@ -132,11 +144,12 @@ header img {
 .message.right .text {
   border: 1px solid #1d1b1b;
   background: #ffffff;
-
+  
   padding: 8px 14px;
   border-radius: 6px 6px 10px 10px;
   max-width: 50%;
   font-size: 0.9rem;
+  
 }
 .base-text {
   display: flex;
@@ -146,8 +159,9 @@ header img {
   border: 1px solid #7c7c7c;
   width: 400px;
   max-height: 40px;
-  padding: 5px;
+  padding:5px ;
 }
+
 
 .chatt {
   background: #ffffff;
@@ -155,14 +169,16 @@ header img {
   border: 1px solid #7c7c7c;
   width: 280px;
   height: 25px;
-  padding-left: 25px;
+  padding-left:25px ;
   margin-left: 10px;
   margin-right: 5px;
   padding-top: 5px;
   font-size: 15px;
 }
 
-.iconos {
+
+.iconos{
   margin-left: 5px;
   margin-right: 5px;
 }
+
