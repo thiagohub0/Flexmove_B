@@ -1,115 +1,104 @@
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    height: 100vh;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 950px;
+}
 .container {
-width: 421px;
-height: 750px;
+  width: 424px;
+  height: 950px;
 }
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-   .logo img {
-    background-color: #f4f4f8;
-    width: 421px;
-    height: 200px;
-   border-radius: 0cqb;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  background-color: #f4f4f8;
+  width: 421px;
+  height: 200px;
+  border-radius: 0cqb;
+}
 .texto {
+  margin-top: 60px;
 
-margin-top: 60px;
-
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-group {
-    position: relative;
-    margin-bottom: 15px;
-  }
-
-  
-
-.voltar{
-
-    background-color: black;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer; 
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-    margin-top: 40px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  margin-bottom: 15px;
 }
 
-.voltar{
- 
+.voltar {
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.voltar {
   width: 220px;
   height: 45px;
 }
 
 .voltar:hover {
-background-color: rgba(39, 36, 36, 0.884);
-transform: translateY(-2px);
+  background-color: rgba(39, 36, 36, 0.884);
+  transform: translateY(-2px);
 }
-  .entrar{
- 
-    background-color: black;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer; 
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.entrar {
+  background-color: black;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.entrar{
-     width: 220px;
-    height: 45px;
+.entrar {
+  width: 220px;
+  height: 45px;
 }
-
 
 .entrar:hover {
-background-color: rgba(39, 36, 36, 0.884);
-transform: translateY(-2px);
+  background-color: rgba(39, 36, 36, 0.884);
+  transform: translateY(-2px);
 }
-  
 
 .fondo {
-
-width: 300px;
+  width: 300px;
   height: 200px;
 }
 
-.fondo img{
-display: block;
-    margin-left: auto;
-    margin-right: -30px;
-    width: 400px;
+.fondo img {
+  display: block;
+  margin-left: auto;
+  margin-right: -30px;
+  width: 400px;
   height: 250px;
 }
-.circulo
-
-
- { width: 100%; height: 100px; background-color:#f4f5f8; border-radius: 51% 49% 49% 51% / 0% 0% 100% 100%; }
- 
-
-  
+.circulo {
+  width: 100%;
+  height: 100px;
+  background-color: #f4f5f8;
+  border-radius: 51% 49% 49% 51% / 0% 0% 100% 100%;
+}
