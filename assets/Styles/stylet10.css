@@ -5,11 +5,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  height: 950px;
+  height: 956px;
 }
 .container {
-  width: 424px;
-  height: 950px;
+  width: 450px;
+  height: 750px;
 }
 .logo {
   display: flex;
@@ -17,8 +17,9 @@ body {
   align-items: center;
 }
 .logo img {
+  margin-top: -110px;
   background-color: #f4f4f8;
-  width: 421px;
+  width: 450px;
   height: 200px;
   border-radius: 0cqb;
 }
