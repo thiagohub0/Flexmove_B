@@ -74,6 +74,12 @@ html {
     border-radius: 50px;
     font-weight: 1000;
     font-size: 20px;
+    border: 1px solid;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .parte10 {
     width: 50p;
