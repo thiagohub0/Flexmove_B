@@ -35,7 +35,7 @@ header {
   align-items: center;
   gap: 10px;
   background: linear-gradient(90deg, #d6d6d6, #d4d4d4, #d4d4d4, #4991d4);
-  padding: 50px 20px 10px 15px;
+  padding: 50px 20px 10px 25px;
   font-weight: 700;
   font-size: 1.9rem;
   color: #1d1c1c;
@@ -74,15 +74,17 @@ header img {
   background-image: url(../Imagens/imagensdateladochat/image4.png);
   flex: 1;
   overflow-y: auto;
-  padding: 10px 15px 20px;
+  padding: 10px 25px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   z-index: 2;
   position: relative;
   scroll-behavior: smooth;
-  width: auto;
+  width: 103vw;
   height: 780px;
+  justify-content: space-evenly;
+  margin: 30 auto;
 }
 
 .message.left {
