@@ -82,7 +82,7 @@ header img {
   position: relative;
   scroll-behavior: smooth;
   width: auto;
-  height: 740px;
+  height: 780px;
 }
 
 .message.left {
@@ -146,6 +146,7 @@ header img {
   width: 400px;
   max-height: 40px;
   padding: 5px;
+  margin-left: 18px;
 }
 
 .chatt {
