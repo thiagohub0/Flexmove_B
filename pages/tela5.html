@@ -113,12 +113,16 @@
                 alt="seta"
               />
             </a>
-            <a href="../pages/telat12.html" class="parte11"
-              >Solicitar Atendimento</a
-            >
+            <button class="parte11">Solicitar Atendimento</button>
           </div>
         </div>
       </div>
     </hearder>
+
+    <script>
+      document.querySelector(".parte11").addEventListener("click", () => {
+        window.location.href = "/pages/telat12.html?id=4";
+      });
+    </script>
   </body>
 </html>

@@ -11,7 +11,8 @@ h1 {
 }
 .movimg {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 100vw;
 }
 button {
   width: 250px;
@@ -21,6 +22,9 @@ button {
 }
 .tam {
   height: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .etapa {
   display: flex;
@@ -40,6 +44,12 @@ button {
   justify-content: space-evenly;
   align-items: center;
   background-color: white;
+  width: 45vw;
+  height: 8vw;
+  border-radius: 30px;
+  border: 1px solid;
+  color: black;
+  text-decoration: none;
 }
 .parte3 {
   display: flex;
