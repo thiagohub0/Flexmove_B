@@ -32,14 +32,14 @@ rotasConsultas.delete("/consultas/:id", autenticacao, async (req, res) => {
 });
 
 rotasConsultas.put("/consultas/:id", autenticacao, async (req, res) => {
-  const id = req.params.id;
+  const idReq = req.params.id;
   const data = {};
 
   if (req.body.situacao) data.situacao = req.body.situacao;
   if (req.body.plano_id) data.plano_id = req.body.plano_id;
   if (req.body.chat) data.chat = req.body.chat;
 
-  await db.consulta.update({ where: id, data });
+  await db.consulta.update({ where: { id: parseInt(idReq) }, data });
   res.json({ sucesso: "ok" });
 });
 

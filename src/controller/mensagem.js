@@ -21,8 +21,11 @@ rotasMensagens.post("/mensagens", async (req, res) => {
   res.json({ sucesso: "ok" });
 });
 
-rotasMensagens.delete("/mensagens/:id", autenticacao, async (req, res) => {
-  await db.res.json({ sucesso: "ok" });
+rotasMensagens.delete("/mensagens/:id", async (req, res) => {
+  await db.mensagem.delete({
+    where: { id: Number(req.params.id) },
+  });
+  res.json({ sucesso: "ok" });
 });
 
 rotasMensagens.put("/mensagens/:id", async (req, res) => {

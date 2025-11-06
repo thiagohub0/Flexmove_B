@@ -25,18 +25,17 @@ rotasChats.post("/chats", async (req, res) => {
 rotasChats.delete("/chats/:id", async (req, res) => {
   await db.chat.delete({
     where: { id: Number(req.params.id) },
-    include: { consultas: true },
   });
   res.json({ sucesso: "ok" });
 });
 
 rotasChats.put("/chats/:id", async (req, res) => {
-  const id = req.params.id;
+  const idReq = req.params.id;
   const data = {};
 
   if (req.body.consulta_id) data.consulta_id = req.body.consulta_id;
 
-  await db.chat.update({ where: id, data });
+  await db.chat.update({ where: { id: parseInt(idReq) }, data });
   res.json({ sucesso: "ok" });
 });
 
