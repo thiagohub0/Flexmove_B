@@ -9,19 +9,24 @@ rotasPlanos.get("/planos", async (req, res) => {
 });
 
 rotasPlanos.post("/planos", async (req, res) => {
-  const { problema, categoria, situacao } = req.body;
+  const { problema, categoria, plano_situacao, consulta_situacao } = req.body;
 
   await db.plano.create({
     data: {
       problema,
       categoria,
-      situacao,
+      situacao: plano_situacao,
+      consultas: {
+        create: {
+          situacao: consulta_situacao,
+        },
+      },
     },
   });
   res.json({ sucesso: "ok" });
 });
 
-rotasPlanos.delete("/planos/:id" ,autenticacao, async (req, res) => {
+rotasPlanos.delete("/planos/:id", autenticacao, async (req, res) => {
   await db.plano.delete({
     where: { id: Number(req.params.id) },
     include: { usuarios: true },
@@ -29,7 +34,7 @@ rotasPlanos.delete("/planos/:id" ,autenticacao, async (req, res) => {
   res.json({ sucesso: "ok" });
 });
 
-rotasPlanos.put("/planos/:id",autenticacao, async (req, res) => {
+rotasPlanos.put("/planos/:id", autenticacao, async (req, res) => {
   const id = req.params.id;
   const data = {};
 
