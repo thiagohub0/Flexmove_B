@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch index.js"
+    "start": "npx prisma migrate deploy && node srclindex.js"
   },
   "keywords": [],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^6.16.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^6.16.2"

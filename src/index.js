@@ -4,9 +4,11 @@ const { rotasConsultas } = require("./controller/consulta");
 const { rotasChats } = require("./controller/chat");
 const { rotasPlanos } = require("./controller/plano");
 const { rotasMensagens } = require("./controller/mensagem");
+var cors = require("cors");
 
 const server = express();
 
+server.use(cors());
 server.use(express.json());
 
 server.use(rotasUsuarios);

@@ -34,6 +34,7 @@ rotasUsuarios.post("/usuarios", async (req, res) => {
       tipo,
     },
   });
+
   res.json({ sucesso: "Ok" });
 });
 
