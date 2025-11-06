@@ -4,7 +4,12 @@ const { autenticacao } = require("../autenticacao");
 const rotasPlanos = Router();
 
 rotasPlanos.get("/planos", async (req, res) => {
-  const planos = await db.plano.findMany();
+  const planos = await db.plano.findMany({
+    include: {
+      usuarios: true,
+      consultas: true,
+    },
+  });
   res.json(planos);
 });
 
@@ -29,7 +34,6 @@ rotasPlanos.post("/planos", async (req, res) => {
 rotasPlanos.delete("/planos/:id", autenticacao, async (req, res) => {
   await db.plano.delete({
     where: { id: Number(req.params.id) },
-    include: { usuarios: true },
   });
   res.json({ sucesso: "ok" });
 });
