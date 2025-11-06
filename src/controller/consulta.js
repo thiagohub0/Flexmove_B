@@ -9,12 +9,11 @@ rotasConsultas.get("/consultas", async (req, res) => {
 });
 
 rotasConsultas.post("/consultas", async (req, res) => {
-  const { situacao, chat, plano_id } = req.body;
+  const { situacao, plano_id } = req.body;
 
   await db.consulta.create({
     data: {
       situacao,
-      chat,
       plano: {
         connect: {
           id: plano_id,
@@ -25,14 +24,14 @@ rotasConsultas.post("/consultas", async (req, res) => {
   res.json({ sucesso: "ok" });
 });
 
-rotasConsultas.delete("/consultas/:id",autenticacao, async (req, res) => {
+rotasConsultas.delete("/consultas/:id", autenticacao, async (req, res) => {
   await db.consulta.delete({
     where: { id: Number(req.params.id) },
   });
   res.json({ sucesso: "ok" });
 });
 
-rotasConsultas.put("/consultas/:id",autenticacao, async (req, res) => {
+rotasConsultas.put("/consultas/:id", autenticacao, async (req, res) => {
   const id = req.params.id;
   const data = {};
 
