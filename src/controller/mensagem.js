@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const { db } = require("../db");
+const { autenticacao } = require("../autenticacao");
 const rotasMensagens = Router();
 
 rotasMensagens.get("/mensagens", async (req, res) => {
@@ -20,7 +21,7 @@ rotasMensagens.post("/mensagens", async (req, res) => {
   res.json({ sucesso: "ok" });
 });
 
-rotasMensagens.delete("/mensagens/:id", async (req, res) => {
+rotasMensagens.delete("/mensagens/:id", autenticacao, async (req, res) => {
   await db.res.json({ sucesso: "ok" });
 });
 

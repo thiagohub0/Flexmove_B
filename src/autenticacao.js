@@ -17,4 +17,4 @@ function autenticacao(req, res, next) {
     res.status(401).send("O token de acesso deve ser válido!");
   }
 }
-module.exports = { autenticacao };
+module.exports = { autenticacao, chaveSecreta };
