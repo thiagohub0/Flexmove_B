@@ -12,7 +12,7 @@
 }
 
 .input input {
-  padding-left: 15px;
+  padding-left: 10px;
   opacity: 80%;
 }
 
@@ -30,13 +30,15 @@
   font-size: 40px;
 }
 .mover {
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .botao1 {
+  margin-top: 50px;
   width: 300px;
   height: 40px;
   border-radius: 30px;

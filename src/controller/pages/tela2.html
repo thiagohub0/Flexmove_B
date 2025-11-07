@@ -3,25 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/Styles/stylet2.css" />
+    <link rel="stylesheet" href="/Styles/stylet2.css" />
     <title>Tela 2</title>
   </head>
   <body>
     <header>
       <div class="seta">
-        <a href="../pages/tela1.html">
-          <img
-            src="../assets/Imagens/tela2/seta_esquerda.png"
-            width="50"
-            alt="seta"
-          />
+        <a href="/">
+          <img src="/Imagens/tela2/seta_esquerda.png" width="50" alt="seta" />
         </a>
       </div>
       <div class="logo">
-        <img
-          src="../assets/Imagens/tela1/logo_flexmove.svg"
-          alt="Logo do site"
-        />
+        <img src="/Imagens/tela1/logo_flexmove.svg" alt="Logo do site" />
       </div>
     </header>
     <h1 class="titulo1">Novo usuário</h1>
@@ -31,7 +24,7 @@
           <div class="input">
             <img
               class="icone"
-              src="../assets/Imagens/tela2/icon_perfil2.svg"
+              src="/Imagens/tela2/icon_perfil2.svg"
               alt="user"
             />
             <input
@@ -45,7 +38,7 @@
           <div class="input">
             <img
               class="icone"
-              src="../assets/Imagens/tela2/icon_calendario.svg"
+              src="/Imagens/tela2/icon_calendario.svg"
               alt="calendario"
             />
             <input
@@ -59,7 +52,7 @@
           <div class="input">
             <img
               class="icone"
-              src="../assets/Imagens/tela2/icon_correio.svg"
+              src="/Imagens/tela2/icon_correio.svg"
               atl="boleto"
             />
             <input
@@ -70,11 +63,7 @@
             />
           </div>
           <div class="input">
-            <img
-              class="icone"
-              src="../assets/Imagens/tela2/cadeado.svg"
-              alt="cadeado"
-            />
+            <img class="icone" src="/Imagens/tela2/cadeado.svg" alt="cadeado" />
             <input
               type="text"
               placeholder="Crie sua senha..."
@@ -85,26 +74,13 @@
           <button type="submit" class="botao1">Cadastrar</button>
         </form>
         <br />
-        <h2>OU</h2>
-        <button>
-          <img
-            class="icone"
-            src="../assets/Imagens/tela2/icon_google.svg"
-            alt="cadeado"
-          />
-          Entrar com o Google
-        </button>
       </div>
     </div>
     <div class="computer">
-      <img
-        class="pc"
-        src="../assets/Imagens/tela2/notebook.svg"
-        alt="computerr"
-      />
+      <img class="pc" src="/Imagens/tela2/notebook.svg" alt="computerr" />
     </div>
     <script>
-      API_URL = "https://nq9nsw-3000.csb.app/usuarios";
+      API_URL = "/usuarios";
       const form = document.querySelector("form");
 
       form.addEventListener("submit", async function (event) {

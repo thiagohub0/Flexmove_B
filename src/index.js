@@ -8,12 +8,15 @@ var cors = require("cors");
 const { db } = require("./db");
 const jwt = require("jsonwebtoken");
 const { chaveSecreta } = require("./autenticacao");
+const { rotasPaginas } = require("./controller/paginas");
 
 const server = express();
 
 server.use(cors());
 server.use(express.json());
+server.use(express.static("assets"));
 
+server.use(rotasPaginas);
 server.use(rotasUsuarios);
 server.use(rotasConsultas);
 server.use(rotasChats);

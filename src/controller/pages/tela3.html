@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/stylet3.css" />
+    <title>Tela 3</title>
+  </head>
+  <body>
+    <header>
+      <div class="seta">
+        <a href="/">
+          <img src="/Imagens/tela2/seta_esquerda.png" width="50" alt="seta" />
+        </a>
+      </div>
+      <div class="logo">
+        <img src="/Imagens/tela1/logo_flexmove.svg" alt="Logo do site" />
+      </div>
+    </header>
+    <h1 class="titulo1">Profissional</h1>
+    <div>
+      <form>
+        <div class="mover">
+          <div class="input">
+            <img
+              class="icone"
+              src="/Imagens/tela2/icon_perfil2.svg"
+              alt="user"
+            />
+            <input
+              type="text"
+              placeholder="  Digite seu nome completo..."
+              name="nome"
+              id="nome"
+            />
+          </div>
+          <div class="input">
+            <img
+              class="icone"
+              src="/Imagens/tela2/icon_calendario.svg"
+              alt="calendario"
+            />
+            <input
+              type="date"
+              placeholder="  Digite sua data de nascimento..."
+              name="data"
+              id="data"
+            />
+          </div>
+          <div class="input">
+            <img class="icone" src="/Imagens/tela2/cadeado.svg" alt="cadeado" />
+            <input
+              type="text"
+              placeholder="  Crie sua senha..."
+              name="senha"
+              id="senha"
+            />
+          </div>
+          <div class="input">
+            <img
+              class="icone"
+              src="/Imagens/tela2/icon_correio.svg"
+              atl="boleto"
+            />
+            <input
+              type="text"
+              placeholder="  Digite seu email..."
+              name="email"
+              id="email"
+            />
+          </div>
+          <h2>Comprovação</h2>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            placeholder="  Digite o número do seu CREFITO..."
+            name="crefito"
+            id="crefito"
+          />
+          <input
+            type="text"
+            placeholder="  Digite sua área de especialização..."
+            name="espe"
+            id="espe"
+          />
+        </div>
+        <div class="mover">
+          <br />
+          <button type="submit" class="botao1">Enviar</button>
+          <br />
+        </div>
+      </form>
+    </div>
+    <div class="computer">
+      <img class="pc" src="/Imagens/tela2/notebook.svg" alt="computerr" />
+    </div>
+    <script>
+      API_URL = "/usuarios";
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        console.log("entrou");
+
+        const productName = document.getElementById("nome").value;
+        const productdata = document.getElementById("data").value;
+        const productemail = document.getElementById("email").value;
+        const productSenha = document.getElementById("senha").value;
+        const productCrefito = document.getElementById("crefito").value;
+        const productespe = document.getElementById("espe").value;
+
+        const postData = {
+          nome: productName,
+          email: productemail,
+          data_de_nascimento: productdata,
+          senha: productSenha,
+          certificado: productCrefito,
+          especializacao: productespe,
+          tipo: "Profissional",
+          avatar: "",
+          telefone: "2",
+        };
+
+        try {
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(postData),
+          };
+          const response = await fetch(API_URL, options);
+          if (!response.ok) {
+            throw new Error(`Erro: ${response.status}`);
+          }
+          const dados = await response.json();
+          console.log(dados);
+          // location.reload();
+        } catch (error) {
+          console.error("Erro na requisição:", error.message);
+        }
+      });
+    </script>
+  </body>
+</html>

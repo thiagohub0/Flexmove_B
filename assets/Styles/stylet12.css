@@ -82,8 +82,6 @@ header img {
 .messages {
   background-image: url(../Imagens/imagensdateladochat/image4.png);
   flex: 1;
-  overflow-y: auto;
-  padding: 10px 25px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
