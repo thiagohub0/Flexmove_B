@@ -65,4 +65,12 @@ rotasUsuarios.put("/usuarios/:id", async (req, res) => {
   res.json({ sucesso: "ok" });
 });
 
+rotasUsuarios.get("/terapeutas", async (req, res) => {
+  const terapeutas = await db.usuario.findMany({
+    where: {
+      tipo: "Profissional",
+    },
+  });
+  res.json(terapeutas);
+});
 module.exports = { rotasUsuarios };

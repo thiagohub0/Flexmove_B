@@ -14,8 +14,6 @@
       <a href="/inicial">
         <img src="/Imagens/seta_esquerda.svg" alt="setaaa"> 
       </a>
-      <img src="/Imagens/imagensdateladochat/Ellipse 4.svg" alt="foto do Dr. Thiago Henrique" />
-      Dr. Thiago henrique
     </header>
 
     <div class="date" aria-live="polite">Quarta feira , Setembro 25</div>
@@ -23,43 +21,43 @@
     <div class="messages" id="messages">
         
       <div class="message left">
-        <img src="/Imagens/imagensdateladochat/Ellipse 4.svg" alt="Foto do Dr. Thiago Henrique" />
+        <img src="/Imagens/thiago.svg" alt="Foto do Dr. Thiago Henrique" />
         <div class="text">Olá! Como posso ajudar você?</div>
       </div>
 
       <div class="message right">
         <div class="text">Oi, doutor. Estou com uma dor nas costas que não melhora.</div>
-        <img src="/Imagens/imagensdateladochat/Ellipse 6.svg" alt="Foto do paciente" />
+        <img src="/Imagens/icon_rosto.svg" alt="Foto do paciente" />
       </div>
 
       <div class="message left">
-        <img src="/Imagens/imagensdateladochat/Ellipse 4.svg" alt="Foto do Dr. Thiago Henrique" />
+        <img src="/Imagens/thiago.svg" alt="Foto do Dr. Thiago Henrique" />
         <div class="text">Entendo. Essa dor apareceu de repente ou foi aumentando?</div>
       </div>
 
       <div class="message right">
         <div class="text">Foi aumentando nos últimos dias, principalmente quando fico sentado por muito tempo.</div>
-        <img src="/Imagens/imagensdateladochat/Ellipse 6.svg" alt="Foto do paciente" />
+        <img src="/Imagens/rosto.svg" alt="Foto do paciente" />
       </div>
 
       <div class="message left">
-        <img src="/Imagens/imagensdateladochat/Ellipse 4.svg" alt="Foto do Dr. Thiago Henrique" />
+        <img src="/Imagens/thiago.svg" alt="Foto do Dr. Thiago Henrique" />
         <div class="text">Certo. Você já tentou algum tratamento ou fez algum exercício?</div>
       </div>
 
       <div class="message right">
         <div class="text">Tomei um analgésico, mas não fiz exercícios.</div>
-        <img src="/Imagens/imagensdateladochat/Ellipse 6.svg" alt="Foto do paciente" />
+        <img src="/Imagens/rosto.svg" alt="Foto do paciente" />
       </div>
 
       <div class="message left">
-        <img src="/Imagens/imagensdateladochat/Ellipse 4.svg" alt="Foto do Dr. Thiago Henrique" />
+        <img src="/Imagens/thiago.svg" alt="Foto do Dr. Thiago Henrique" />
         <div class="text">Ok. Vou te ensinar alguns alongamentos para aliviar a dor e também exercícios para fortalecer a região. Isso ajuda a prevenir que a dor volte.</div>
       </div>
 
       <div class="message right">
         <div class="text">...</div>
-        <img src="/Imagens/imagensdateladochat/Ellipse 6.svg" alt="Foto do paciente"/>
+        <img src="/Imagens/rosto.svg" alt="Foto do paciente"/>
       </div>
       <div class="base-text">
       <img class="iconos" src="/Imagens/imagensdateladochat/icons8-câmera-96 1.svg" alt="camara">
@@ -74,26 +72,30 @@
     </div>
 
     <script>
-      const searchParams = new URLSearchParams(window.location.href.split("?")[1]);
-      
+      (async ()=>{
 
-      const id = searchParams.get("id")
+        const searchParams = new URLSearchParams(window.location.href.split("?")[1]);
+        
+        
+        const id = searchParams.get("id")
         console.log(id)
-
-        const response = fetch("/terapeutas/" + id)
-
-      const dados = terapeutas.find(terapeuta => terapeuta.id == id)
-      
-      const header = document.querySelector("header")
+        
+        const response = await fetch("/terapeutas")
+        const terapeutas = await response.json()
+        
+        const dados = terapeutas.find(terapeuta => terapeuta.id == id)
+        
+        const header = document.querySelector("header")
         header.innerHTML = `
-        <header>
-      <a href="/inicial">
-        <img src="/Imagens/seta_esquerda.svg" alt="setaaa"> 
-      </a>
-      <img src="/Imagens/imagensdateladochat/${dados.imagem}" alt="${dados.nome}" />
-      ${dados.nome}
-    </header>
-        `
-    </script>
-</body>
+        <div>
+          <a href="/inicial">
+            <img src="/Imagens/seta_esquerda.svg" alt="setaaa"> 
+            </a>
+            <img src="${dados.avatar}" alt="${dados.nome}" />
+            ${dados.nome}
+            </div>
+            `
+          })()
+      </script>
+    </body>
 </html>
