@@ -35,7 +35,7 @@ rotasUsuarios.post("/usuarios", async (req, res) => {
     },
   });
 
-  res.json({ sucesso: "Ok" });
+  res.status(201).json({ ok: "sucesso" });
 });
 
 rotasUsuarios.delete("/usuarios/:id", autenticacao, async (req, res) => {

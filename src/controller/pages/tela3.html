@@ -136,7 +136,9 @@
           }
           const dados = await response.json();
           console.log(dados);
-          // location.reload();
+          // location.reload()
+
+          window.location.href = "/login";
         } catch (error) {
           console.error("Erro na requisição:", error.message);
         }

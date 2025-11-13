@@ -49,6 +49,7 @@ server.post("/login", async (req, res) => {
 
   res.status(200).json({
     token,
+    nome: usuario.nome,
   });
 });
 

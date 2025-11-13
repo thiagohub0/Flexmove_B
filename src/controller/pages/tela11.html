@@ -18,25 +18,27 @@
 
       <h2>Login</h2>
 
-      <div class="senha">
-        <div class="texto">Digite seu email</div>
-      </div>
-      <div class="email">
-        <div class="textodos">Digite sua senha</div>
-      </div>
+      <form action="">
+        <div class="senha">
+          <input placeholder="Digite seu email" id="email" class="texto" />
+        </div>
+        <div class="email">
+          <input placeholder="Digite sua senha" id="senha" class="textodos" />
+        </div>
 
-      <div class="voltar">
-        <a href="/">
-          <img
-            src="/Imagens/imagensdateladelogin/image 7.svg"
-            alt=""
-            srcset=""
-          />
+        <div class="voltar">
+          <a href="/">
+            <img
+              src="/Imagens/imagensdateladelogin/image 7.svg"
+              alt=""
+              srcset=""
+            />
+          </a>
+        </div>
+        <a href="/inicial">
+          <button type="submit" class="btn">Entrar</button>
         </a>
-      </div>
-      <a href="/inicial">
-        <button class="btn">Entrar</button>
-      </a>
+      </form>
       <div class="footer-img">
         <img
           src="/Imagens/imagensdateladelogin/image 1.svg"
@@ -45,5 +47,47 @@
         />
       </div>
     </div>
+
+    <script>
+      API_URL = "/login";
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        console.log("entrou");
+
+        const email = document.querySelector("#email").value;
+        const senha = document.querySelector("#senha").value;
+
+        const postData = {
+          email,
+          senha,
+        };
+        console.log(JSON.stringify(postData));
+
+        try {
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(postData),
+          };
+          const response = await fetch(API_URL, options);
+          if (!response.ok) {
+            throw new Error(`Erro: ${response.status}`);
+          }
+          const dados = await response.json();
+          console.log(dados);
+          // location.reload()
+          sessionStorage.setItem("token", dados.token);
+          localStorage.setItem("nome", dados.nome);
+
+          window.location.href = "/inicial";
+        } catch (error) {
+          console.error("Erro na requisição:", error.message);
+        }
+      });
+    </script>
   </body>
 </html>
