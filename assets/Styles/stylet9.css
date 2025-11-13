@@ -46,7 +46,6 @@
   width: 96vw;
   display: flex;
   justify-content: end;
-  color: red;
 }
 
 .parte5 {
@@ -60,4 +59,9 @@
 
 .fonte2 {
   opacity: 50%;
+}
+
+.parte6 {
+  color: red;
+  text-decoration: none;
 }
