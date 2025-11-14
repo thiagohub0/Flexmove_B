@@ -64,9 +64,14 @@ button {
   align-items: center;
 }
 .computer {
+  padding: 30px;
   display: flex;
   justify-content: center;
 }
 .pc {
   width: 350px;
+}
+
+a {
+  text-decoration: none;
 }
