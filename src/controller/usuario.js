@@ -21,6 +21,10 @@ rotasUsuarios.post("/usuarios", async (req, res) => {
     tipo,
   } = req.body;
 
+  if (senha == "" || email == "" || nome == "") {
+    res.status(401).send(" Campo(s) Inválido ");
+  }
+
   await db.usuario.create({
     data: {
       nome,

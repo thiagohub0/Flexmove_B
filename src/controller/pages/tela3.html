@@ -32,6 +32,7 @@
               placeholder="  Digite seu nome completo..."
               name="nome"
               id="nome"
+              required
             />
           </div>
           <div class="input">
@@ -45,6 +46,7 @@
               placeholder="  Digite sua data de nascimento..."
               name="data"
               id="data"
+              required
             />
           </div>
           <div class="input">
@@ -54,6 +56,7 @@
               placeholder="  Crie sua senha..."
               name="senha"
               id="senha"
+              required
             />
           </div>
           <div class="input">
@@ -67,6 +70,7 @@
               placeholder="  Digite seu email..."
               name="email"
               id="email"
+              required
             />
           </div>
           <h2>Comprovação</h2>
@@ -77,12 +81,14 @@
             placeholder="  Digite o número do seu CREFITO..."
             name="crefito"
             id="crefito"
+            required
           />
           <input
             type="text"
             placeholder="  Digite sua área de especialização..."
             name="espe"
             id="espe"
+            required
           />
         </div>
         <div class="mover">
@@ -101,7 +107,6 @@
 
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
-        console.log("entrou");
 
         const productName = document.getElementById("nome").value;
         const productdata = document.getElementById("data").value;
@@ -135,7 +140,6 @@
             throw new Error(`Erro: ${response.status}`);
           }
           const dados = await response.json();
-          console.log(dados);
           // location.reload()
 
           window.location.href = "/login";

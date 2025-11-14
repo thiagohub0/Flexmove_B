@@ -54,7 +54,6 @@
 
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
-        console.log("entrou");
 
         const email = document.querySelector("#email").value;
         const senha = document.querySelector("#senha").value;
@@ -63,8 +62,6 @@
           email,
           senha,
         };
-        console.log(JSON.stringify(postData));
-
         try {
           const options = {
             method: "POST",
@@ -78,12 +75,11 @@
             throw new Error(`Erro: ${response.status}`);
           }
           const dados = await response.json();
-          console.log(dados);
           // location.reload()
           sessionStorage.setItem("token", dados.token);
           localStorage.setItem("nome", dados.nome);
 
-          window.location.href = "/inicial";
+          // window.location.href = "/inicial";
         } catch (error) {
           console.error("Erro na requisição:", error.message);
         }
