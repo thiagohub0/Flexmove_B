@@ -50,12 +50,12 @@ h2 {
   border-bottom: 0.4px solid;
 }
 .texto {
+  color: black;
   border: none;
   margin: -6px;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(167, 167, 167);
 }
 .textodos {
   border: none;
@@ -63,7 +63,7 @@ h2 {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(153, 153, 153);
+  color: black;
 }
 .senha {
   margin-left: 45px;
@@ -95,6 +95,7 @@ h2 {
   font-size: 15px;
   cursor: pointer;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
 .divisor {
@@ -144,4 +145,9 @@ h2 {
 .footer-img img {
   width: 100%;
   border-radius: 10px;
+}
+
+input:focus {
+  border: none;
+  outline: none;
 }

@@ -43,8 +43,18 @@
         </div>
       </div>
       <div class="parte4">
-        <a class="parte6" href="/">Terminar sessão</a>
+        <a href="/">
+          <button class="parte6" onclick="encerrarSessao()">
+            Terminar sessão
+          </button>
+        </a>
       </div>
     </header>
+    <script>
+      function encerrarSessao() {
+        sessionStorage.removeItem("token");
+        window.location.href = "/";
+      }
+    </script>
   </body>
 </html>

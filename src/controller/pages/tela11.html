@@ -7,6 +7,21 @@
     <title>Tela 11</title>
   </head>
   <body>
+    <script>
+      function waitForSessionVar(key, callback, interval = 200) {
+        const watcher = setInterval(() => {
+          const value = sessionStorage.getItem(key);
+
+          if (value !== null) {
+            clearInterval(watcher);
+            callback(value);
+          }
+        }, interval);
+      }
+      waitForSessionVar("token", (value) => {
+        window.location.href = "/inicial";
+      });
+    </script>
     <div class="container">
       <div class="logo">
         <img
@@ -23,7 +38,7 @@
           <input placeholder="Digite seu email" id="email" class="texto" />
         </div>
         <div class="email">
-          <input placeholder="Digite sua senha" id="senha" class="textodos" />
+          <input type="password" placeholder="Digite sua senha" id="senha" class="textodos" />
         </div>
 
         <div class="voltar">

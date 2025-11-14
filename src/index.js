@@ -24,12 +24,14 @@ server.use(rotasPlanos);
 server.use(rotasMensagens);
 server.post("/login", async (req, res) => {
   const { email, senha } = req.body;
+  // console.log(email, senha);
 
   const usuario = await db.usuario.findFirst({
     where: {
       email,
     },
   });
+  console.log(usuario);
 
   if (!usuario) {
     res.status(401).send({
