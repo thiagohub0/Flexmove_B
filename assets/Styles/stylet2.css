@@ -30,6 +30,7 @@
   font-size: 40px;
 }
 .mover {
+  padding: 20px;
   height: 30vh;
   display: flex;
   justify-content: center;

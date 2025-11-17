@@ -75,6 +75,20 @@
               required
             />
           </div>
+          <div class="input">
+            <img
+              class="icone"
+              src="/Imagens/tela2/telefono.svg"
+              alt="cadeado"
+            />
+            <input
+              type="text"
+              placeholder="Digite seu número..."
+              name="telefone"
+              id="telefone"
+              required
+            />
+          </div>
           <a href="/inicial">
             <button type="submit" class="botao1">Cadastrar</button>
           </a>
@@ -96,6 +110,7 @@
         const productdata = document.getElementById("data").value;
         const productemail = document.getElementById("email").value;
         const productSenha = document.getElementById("senha").value;
+        const productTelefone = document.getElementById("telefone").value;
 
         const postData = {
           nome: productName,
@@ -104,7 +119,7 @@
           senha: productSenha,
           tipo: "Cliente",
           avatar: "",
-          telefone: "1",
+          telefone: productTelefone,
         };
 
         try {
